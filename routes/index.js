@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   //res.render('login', { title: 'login' });
     console.log('get/')
-    res.sendfile("./public/login.html")
+    res.sendFile("./public/login.html")
 });
 
 module.exports = router;
