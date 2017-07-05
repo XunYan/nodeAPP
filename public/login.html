@@ -83,8 +83,8 @@
         },
         methods:{
             login:function () {
-                /*axios({
-                    url:"/user",
+                axios({
+                    url:"/login",
                     method:"post",
                     data: {
                         phoneNum: this.phoneNum,
@@ -96,8 +96,8 @@
                     })
                     .catch(function (error) {
                         console.log(error);
-                    });*/
-                axios.get('/login', {
+                    });
+                /*axios.get('/login', {
                     params: {
                         ID: 12345
                     }
@@ -107,7 +107,7 @@
                     })
                     .catch(function (error) {
                         console.log(error);
-                    });
+                    });*/
             }
         }
     })
