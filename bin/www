@@ -94,7 +94,8 @@ function onListening() {
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : 'WqpDXfJEDgYj'
+    password : 'WqpDXfJEDgYj',
+    database : 'wwwdb'
 });
 
 connection.connect();
