@@ -60,12 +60,43 @@
     }
 </style>
 <body>
-<div class="welcome">欢迎使用sbyx系统</div>
-<div class="userBox">
-    <div class="userInput"><span>用户名</span><input type="text"></div>
-    <div class="userInput"><span>密码</span><input type="text"></div>
-    <div class="userBtn">登录</div>
-    <img src="./images/agreement.png" alt="">
+<div id="app">
+    <div class="welcome">欢迎使用sbyx系统</div>
+    <div class="userBox">
+        <div class="userInput"><span>用户名</span><input type="text" v-model="phoneNum"></div>
+        <div class="userInput"><span>密码</span><input type="text" v-model="password"></div>
+        <div class="userBtn" @click="login">登录</div>
+        <img src="./images/agreement.png" alt="">
+    </div>
 </div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./javascripts/vue.js"></script>
+<script>
+    const vm = new Vue({
+        el:"app",
+        data(){
+            return{
+                phoneNum:"",
+                password:""
+            }
+        },
+        methods:{
+            login:function () {
+                axios.get('/login',{
+                    phoneNum:this.phoneNum,
+                    password:this.password
+                })
+                    .then(function (response) {
+                        console.log(response);
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+        }
+    })
+    console.log(axios)
+</script>
 </body>
 </html>
