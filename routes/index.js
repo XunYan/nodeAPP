@@ -26,7 +26,7 @@ router.get('/', function(req, res, next) {
 });
 
 /*login*/
-router.get('/login', function(req, res, next) {
+router.post('/login', function(req, res, next) {
     //res.render('login', { title: 'login' });
     console.log(req.body)
     var options = {
