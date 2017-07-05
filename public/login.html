@@ -83,23 +83,12 @@
         },
         methods:{
             login:function () {
-               /* axios({
-                    url:"/user",
+                axios({
+                    url:"/login",
                     method:"post",
                     data: {
                         phoneNum: this.phoneNum,
                         password: this.password
-                    }
-                })
-                    .then(function (response) {
-                        console.log(response);
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                    });*/
-                axios.get('/login', {
-                    params: {
-                        ID: 12345
                     }
                 })
                     .then(function (response) {
