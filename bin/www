@@ -99,7 +99,7 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-var sql = "";
+var sql = "select * from user_info";
 
 connection.query(sql, function(err, rows, fields) {
     if (err) throw err;
