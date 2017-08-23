@@ -90,7 +90,8 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
-/*连接mysql*/
+/*
+/!*连接mysql*!/
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
@@ -105,4 +106,4 @@ var sql = "select * from user_info";
 connection.query(sql, function(err, rows, fields) {
     if (err) throw err;
     console.log('The solution is: ', rows);
-});
+});*/
